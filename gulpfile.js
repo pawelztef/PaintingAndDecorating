@@ -3,26 +3,26 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 
 
-gulp.task('sass', function() {
+function styles(){
   return gulp.src('app/sass/**/*.sass')
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-});
+    .pipe(browserSync.stream());
+}
 
-gulp.task('browserSync', function() {
+function watch() {
   browserSync.init({
     server: {
       baseDir: 'app'
     },
-  })
-});
+  });
 
-gulp.task('watch', function() {
-  gulp.watch('app/sass/**/*.sass', gulp.series('sass'));
-  gulp.watch('app/sass/**/*.sass', gulp.series('browserSync'));
-});
+  gulp.watch('app/sass/**/*.sass', styles);
+  gulp.watch('app/*.html').on('change', browserSync.reload);
+  gulp.watch('app/js/**/*.js').on('change', browserSync.reload);
+}
+
+exports.styles = styles;
+exports.watch = watch;
 
 
