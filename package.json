@@ -1,0 +1,10 @@
+{
+  "name": "PaintingAndDecorating",
+  "version": "1.0.0",
+  "description": "Static Brouchure Website for painting and decorating contractors.",
+  "main": "index.js",
+  "repository": "https://github.com/pawelztef/PaintingAndDecorating.git",
+  "author": "pawleztef",
+  "license": "MIT",
+  "private": false
+}
