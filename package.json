@@ -6,5 +6,8 @@
   "repository": "https://github.com/pawelztef/PaintingAndDecorating.git",
   "author": "pawleztef",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
 }
