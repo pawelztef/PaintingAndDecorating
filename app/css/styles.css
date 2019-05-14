@@ -2,4 +2,11 @@
   background-image: url("https://malujemypoznan.com.pl/templates/yootheme/cache/building-2762342_1280-95306732.jpeg"); }
 
 .bottom-curve {
-  background-image: url("app/minified/images/curve-red.png"); }
+  background-image: url("../images/curve.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  position: absolute;
+  bottom: -4px; }

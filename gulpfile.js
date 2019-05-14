@@ -7,7 +7,7 @@ var replace = require('gulp-replace');
 
 function styles(){
   return gulp.src('app/sass/**/*.sass')
-    .pipe(replace('url("', 'url("app/minified/images/'))
+    // .pipe(replace('url("', 'url("./minified/images/'))
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.stream());
