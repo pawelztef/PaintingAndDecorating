@@ -43,28 +43,58 @@
             </div>
           </div>
         </div>
-        <div class="tm-header uk-visible@m" uk-header>
-          <div uk-sticky media=@m show-on-up animation=uk-animation-slide-top cls-active=uk-navbar-sticky sel-target=.uk-navbar-container>
-            <div class=uk-navbar-container>
-              <div class=uk-container>
-                <nav class=uk-navbar uk-navbar={&quot;align&quot;:&quot;left&quot;,&quot;boundary&quot;:&quot;!.uk-navbar-container&quot;,&quot;dropbar&quot;:true,&quot;dropbar-anchor&quot;:&quot;!.uk-navbar-container&quot;,&quot;dropbar-mode&quot;:&quot;push&quot;}>
-                  <div class=uk-navbar-left>
-                    <a class="uk-navbar-item uk-logo" href="#"> <img src="" alt="PaintingAndDecorating"> </a>
-                  </div>
-                  <div class=uk-navbar-right>
-                    <ul class=uk-navbar-nav>
-                      <li><a href="#firma" uk-scroll offset="-150" duration="800">About me</a></li>
-                      <li><a href="#offer" uk-scroll offset="-15" duration="800">Offer</a></li>
-                      <li><a href="#testimonials" uk-scroll offset="0" duration="800">Testimonials</a></li>
-                      <li><a href="#offer" uk-scroll offset="-15" duration="800">Gallery</a></li>
-                      <li><a href="#contact" uk-scroll offset="0" duration="800">Contact</a></li>
-                    </ul>
-                  </div>
+
+        <!-- <div class="tm-header uk-visible@m" uk-header> -->
+        <!--   <div uk-sticky media=@m show-on-up animation=uk-animation-slide-top cls-active=uk-navbar-sticky sel-target=.uk-navbar-container> -->
+        <!--     <div class=uk-navbar-container> -->
+        <!--       <div class=uk-container> -->
+        <!--         <nav class=uk-navbar uk-navbar={&quot;align&quot;:&quot;left&quot;,&quot;boundary&quot;:&quot;!.uk-navbar-container&quot;,&quot;dropbar&quot;:true,&quot;dropbar-anchor&quot;:&quot;!.uk-navbar-container&quot;,&quot;dropbar-mode&quot;:&quot;push&quot;}> -->
+        <!--           <div class=uk-navbar-left> -->
+        <!--             <a class="uk-navbar-item uk-logo" href="#"> <img src="" alt="PaintingAndDecorating"> </a> -->
+        <!--           </div> -->
+        <!--           <div class=uk-navbar-right> -->
+        <!--             <ul class=uk-navbar-nav> -->
+        <!--               <li><a href="#firma" uk-scroll offset="-150" duration="800">About me</a></li> -->
+        <!--               <li><a href="#offer" uk-scroll offset="-15" duration="800">Offer</a></li> -->
+        <!--               <li><a href="#testimonials" uk-scroll offset="0" duration="800">Testimonials</a></li> -->
+        <!--               <li><a href="#offer" uk-scroll offset="-15" duration="800">Gallery</a></li> -->
+        <!--               <li><a href="#contact" uk-scroll offset="0" duration="800">Contact</a></li> -->
+        <!--             </ul> -->
+        <!--           </div> -->
+        <!--         </nav> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--   </div> -->
+        <!-- </div> -->
+
+
+<div class="tm-header uk-visible@m tm-header-transparent" uk-header="">
+    <div uk-sticky="" media="@m" show-on-up="" animation="uk-animation-slide-top" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container" class="uk-sticky">
+        <div class="uk-navbar-container uk-navbar-transparent uk-light">
+            <div class="uk-container">
+                <nav class="uk-navbar" uk-navbar="{&quot;align&quot;:&quot;left&quot;,&quot;boundary&quot;:&quot;!.uk-navbar-container&quot;,&quot;dropbar&quot;:true,&quot;dropbar-anchor&quot;:&quot;!.uk-navbar-container&quot;,&quot;dropbar-mode&quot;:&quot;push&quot;}">
+                    <div class="uk-navbar-left">
+                        <a href="https://malujemypoznan.com.pl" class="uk-navbar-item uk-logo"> <img src="/templates/yootheme/cache/ap-9bb0bffd.png" srcset="/templates/yootheme/cache/ap-9bb0bffd.png 80w, /templates/yootheme/cache/ap-c6b7a4a5.png 160w" sizes="(min-width: 80px) 80px" data-width="4252" data-height="4176" alt="AP INVEST"></a>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav">
+                            <li class="uk-active"><a href="/">Home</a></li>
+                            <li><a href="/oferta">Oferta</a></li>
+                            <li><a href="/budowa-domow">Budowa Domów</a></li>
+                            <li><a href="/malowanie-natryskowe">Malowanie Natryskowe</a></li>
+                            <li><a href="/kontakt">Kontakt</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                        </ul>
+                    </div>
                 </nav>
-              </div>
             </div>
-          </div>
         </div>
+    </div>
+    <div class="uk-sticky-placeholder" hidden="" style="height: 80px; margin: 0px;"></div>
+</div>
+
+
+
         <!--End of navigation -->
         <!-- Header image -->
         <div class="uk-section-default uk-section-overlap uk-position-relative uk-light" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-fade&quot;,&quot;delay&quot;:200} tm-header-transparent=light tm-header-transparent-placeholder>
