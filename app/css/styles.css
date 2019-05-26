@@ -19,3 +19,32 @@ textarea {
 
 #contact {
   margin-bottom: 40px; }
+
+.uk-navbar-transparent {
+  background: #6986BF;
+  opacity: 0.74; }
+
+.navbar-mobile {
+  background: #6986BF !important;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.28); }
+
+.uk-box-shadow-medium:not(.uk-navbar-transparent) {
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.28); }
+
+.uk-button-text {
+  border-radius: 0 50px 50px 0;
+  padding: 16px 71px 16px 54px;
+  color: #fff;
+  border: 2px solid transparent; }
+  .uk-button-text:hover {
+    background-color: #ba4108;
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
+  .uk-button-text::before {
+    right: 20px; }
+
+.uk-section-secondary {
+  background: #313E59; }
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: #313E59; }

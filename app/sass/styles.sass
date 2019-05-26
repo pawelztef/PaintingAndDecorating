@@ -1,3 +1,5 @@
+@import 'variables'
+
 .section-background-img
   // background-image: url('https://malujemypoznan.com.pl/templates/yootheme/cache/color-3238003_1920-7fa0dd65.jpeg')
   background-image: url('../images/header2.jpg')
@@ -17,3 +19,34 @@ textarea
   border-radius: 60px 0 0 60px
 #contact
   margin-bottom: 40px
+
+.uk-navbar-transparent
+  background: $main
+  opacity: 0.74
+.navbar-mobile
+  background: $main !important
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.28);
+
+.uk-box-shadow-medium:not(.uk-navbar-transparent)
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,.28)
+
+.uk-button-text
+  border-radius: 0 50px 50px 0
+  padding: 16px 71px 16px 54px
+  color: #fff
+  border: 2px solid transparent
+  &:hover
+    background-color: #ba4108 
+    color: rgba(255,255,255,.5)
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,.08)
+  &::before
+    right: 20px
+
+.uk-section-secondary
+    background: $dark
+.uk-navbar-container:not(.uk-navbar-transparent)
+    background: $dark 
+
+
+  
+
