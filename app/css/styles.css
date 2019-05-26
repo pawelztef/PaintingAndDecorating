@@ -28,7 +28,7 @@ textarea {
   background: #6986BF !important;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.28); }
 
-.uk-box-shadow-medium:not(.uk-navbar-transparent) {
+.uk-box-shadow-large:not(.uk-navbar-transparent) {
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.28); }
 
 .uk-button-text {
