@@ -20,6 +20,9 @@ textarea {
 #contact {
   margin-bottom: 40px; }
 
+.uk-navbar {
+  padding: 5px 0; }
+
 .uk-navbar-transparent {
   background: #6986BF;
   opacity: 0.74; }
@@ -56,3 +59,9 @@ textarea {
 
 .el-content {
   font-size: 1.3em; }
+
+.totop {
+  position: fixed;
+  right: 70px;
+  bottom: 100px;
+  width: 125px; }

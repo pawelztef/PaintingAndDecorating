@@ -52,13 +52,11 @@
               <div class="uk-container">
                 <nav class=uk-navbar uk-navbar={&quot;align&quot;:&quot;left&quot;,&quot;boundary&quot;:&quot;!.uk-navbar-container&quot;,&quot;dropbar&quot;:true,&quot;dropbar-anchor&quot;:&quot;!.uk-navbar-container&quot;,&quot;dropbar-mode&quot;:&quot;push&quot;}>
                   <div class=uk-navbar-left>
-                    <a href="" class="uk-navbar-item uk-logo">
               <a class="uk-navbar-item uk-logo" href=""> <img src="images/logo.png" alt="PAINTING AND DECORATING"> </a>
-                    </a>
                   </div>
                   <div class=uk-navbar-right>
                     <ul class=uk-navbar-nav>
-                      <li><a href="#firma" uk-scroll offset="-150" duration="800">About me</a></li>
+                      <li><a href="#firma" uk-scroll offset="-50" duration="800">About me</a></li>
                       <li><a href="#offer" uk-scroll offset="-15" duration="800">Offer</a></li>
                       <li><a href="#testimonials" uk-scroll offset="0" duration="800">Testimonials</a></li>
                       <li><a href="#offer" uk-scroll offset="-15" duration="800">Gallery</a></li>
@@ -79,7 +77,13 @@
             <div class="uk-container uk-position-relative">
               <div class="uk-margin-remove-top uk-margin-remove-bottom uk-grid-margin uk-margin-remove-top uk-margin-remove-bottom" uk-grid>
                 <div class=uk-width-1-1@m>
-                  <h1 class="uk-margin-remove-top uk-margin-remove-bottom uk-width-large uk-text-center" uk-scrollspy-class><h1 style="text-align: left;"><span style="font-size: 36pt;">&nbsp; &nbsp; 739-202-440</span><br /><br />Malowanie wnętrz Poznań<br />Kompleksowe remonty<br />Budowa domów<br /><br /></h1> <span style="font-size: 36pt; color: #666666;"><br /></span> </h1>
+                  <h1 class="uk-margin-remove-top uk-margin-remove-bottom uk-width-large uk-text-center uk-dark" uk-scrollspy-class><h1><span>739-202-440</span><br /><br />
+                      Residential & Commercial Painting<br />
+                      Interior and Exterior Painting<br />
+                      Wooden Floors <br />
+                      Varnishing
+                      <br /><br />
+                  </h1> 
                   <div class="uk-margin uk-margin-remove-top uk-margin-remove-bottom uk-width-xlarge" uk-scrollspy-class=uk-animation-slide-left-small>
                     <div class="uk-flex-middle uk-child-width-auto uk-grid-medium" uk-grid>
                       <div class=el-item> <a class="el-content uk-button uk-button-danger uk-button-large header-button uk-box-shadow-small" href="#contact" uk-scroll offset="-15" duration="800"> Get a Quote</a> </div>
@@ -93,7 +97,7 @@
         </div>
         <!-- End of the header image -->
         <!-- Summary section -->
-        <div id=firma class="uk-section-default uk-section" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-slide-left-medium&quot;,&quot;delay&quot;:200}>
+        <div id=firma class="uk-section-default uk-section uk-section-large" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-slide-left-medium&quot;,&quot;delay&quot;:200}>
           <div class="uk-grid-large uk-margin-xlarge" uk-grid>
             <div class="uk-width-expand@m uk-grid-item-match uk-flex-middle">
               <div class=uk-panel>
@@ -122,7 +126,7 @@
             </div>
           </div>
         </div>
-        <div id="testimonials" class="uk-section-secondary uk-section" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-slide-bottom-medium&quot;,&quot;delay&quot;:200}>
+        <div id="testimonials" class="uk-section-secondary uk-section uk-section-large" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-slide-bottom-medium&quot;,&quot;delay&quot;:200}>
           <div class=uk-container>
             <div class=uk-grid-margin uk-grid>
               <div class=uk-width-1-1@s>
@@ -140,7 +144,7 @@
         </div>
         <!-- End of summary section -->
         <!-- Offer section -->
-        <div id="offer" class="uk-section-default uk-section">
+        <div id="offer" class="uk-section-default uk-section uk-section-large">
           <div class="uk-container">
             <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid="">
               <div class="uk-width-1-1@m uk-first-column">
@@ -215,7 +219,7 @@
         </div>
         <!-- End of offer section -->
         <!-- Contact section -->
-        <div id="contact" class="uk-section-default uk-section" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-slide-bottom-medium&quot;,&quot;delay&quot;:200}>
+        <div id="contact" class="uk-section-default uk-section uk-section-large" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-slide-bottom-medium&quot;,&quot;delay&quot;:200}>
           <div class=uk-container>
             <div class="uk-container uk-margin-xlarge">
               <div class=uk-grid-large uk-grid>
@@ -255,6 +259,9 @@
         </div>
         <!-- End of the contact section -->
         <!-- Footer -->
+        <a href="body" class="totop" uk-scroll>
+          <img class="totop" src="/images/to-top.svg" alt="">
+        </a>
         <div class="tm-footer uk-section-secondary uk-section" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-slide-left-small&quot;,&quot;delay&quot;:false}>
           <div class=uk-container>
             <div class=uk-grid-margin uk-grid>
