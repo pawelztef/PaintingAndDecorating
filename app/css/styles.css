@@ -62,13 +62,17 @@ textarea {
 
 .totop {
   position: fixed;
-  right: 70px;
-  bottom: 100px;
-  width: 125px;
+  right: 60px;
+  bottom: 90px;
+  width: 80px;
   visibility: hidden;
   opacity: 0;
-  transition: all .3s linear; }
+  transition: all .2s linear; }
 
 .totop-visible {
   visibility: visible;
   opacity: 1; }
+
+.side-image {
+  padding-left: 50px;
+  border-radius: 0 0 30px 0; }
