@@ -1,5 +1,13 @@
-.section-background-img {
+#services-call-to-action {
+  background-color: red; }
+
+.header-background-image {
   background-image: url("../images/header2.jpg"); }
+
+.testimonial-background-image {
+  background-image: url("../images/header4.jpg");
+  background-color: #313E59;
+  background-blend-mode: luminosity; }
 
 .bottom-curve {
   background-image: url("../images/curve.png");
