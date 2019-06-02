@@ -1,5 +1,10 @@
+#services {
+  padding: 60px 0; }
+
 #services-call-to-action {
-  background-color: #d24a09; }
+  background-color: #fccd05; }
+  #services-call-to-action h2 {
+    color: #313E59; }
 
 .header-background-image {
   background-image: url("../images/header2.jpg"); }
