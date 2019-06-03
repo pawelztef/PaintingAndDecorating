@@ -1,22 +1,15 @@
 @import 'variables'
 
-#services
-  padding: 60px 0 
 
-#services-call-to-action
-  background-color: $yellow
-  h2
-    color: $dark
-
-    
 
 .header-background-image
   background-image: url('../images/header2.jpg')
 
-.testimonial-background-image
-  background-image: url('../images/header4.jpg')
-  background-color: $dark 
-  background-blend-mode: luminosity 
+.uk-button-danger
+  background-color: $yellow
+  color: $dark !important
+  &:hover, &:focus
+    background-color: darken($yellow, 5%)
 
 .bottom-curve
   background-image: url("../images/curve.png")
@@ -27,17 +20,23 @@
   background-size: contain
   position: absolute
   bottom: -1px
+
 textarea
   resize: none
+
 .header-button
   border-radius: 60px 0 0 60px
+
 #contact
   margin-bottom: 40px
+
 .uk-navbar
   padding: 5px 0
+
 .uk-navbar-transparent
   background: $main
   opacity: 0.74
+
 .navbar-mobile
   background: $main !important
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.28);
@@ -46,7 +45,6 @@ textarea
   box-shadow: 0 10px 30px 0 rgba(0,0,0,.28)
 
 .uk-button-text
-  // border-radius: 0 50px 50px 0
   box-sizing: border-box
   border-radius: 0 
   padding: 0px 71px 0px 54px
@@ -54,11 +52,11 @@ textarea
   color: #fff
   border: 1px solid white
   &:hover
-    background-color: #ba4108 
+    background-color: darken($yellow, 5%)
     color: rgba(255,255,255,.5)
     box-shadow: 0 1px 10px 0 rgba(0,0,0,.08)
     border: none
-    line-height: 54px
+    line-height: 56px
     padding: 0px 72px 0px 55px
   &::before
     right: 25px
@@ -73,28 +71,40 @@ textarea
 
 .totop
   position: fixed
-  right: 60px
-  bottom: 90px
-  width: 80px
+  right: 40px
+  bottom: 50px
+  width: 70px
   visibility: hidden 
-  opacity: 0
   transition: all .2s linear
+
+#totop-link
+  opacity: 0.9
 
 .totop-visible
   visibility: visible 
   opacity: 1
 
-.side-image
-  padding-left: 50px
-  border-radius: 0 0 30px 0
+#summary
+  .side-image
+    padding-left: 50px
+    border-radius: 0 0 30px 0
 
-#testimonials
-  // background-image: url('../images/header6.jpg')
-  // background-size: cover
-  // background-color: $dark
-  // background-blend-mode: luminosity
+#services
+  padding: 80px 0
+  .uk-text-large
+    font-size: 1.3em  
 
-  
+#services-call-to-action
+  background-color: $yellow
+  h2
+    color: $dark
+
+#testimonials 
+  blockquote
+    h2
+      font-size: 1.5em
+  q
+    font-size: .9em
 
 
 

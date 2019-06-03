@@ -1,18 +1,11 @@
-#services {
-  padding: 60px 0; }
-
-#services-call-to-action {
-  background-color: #fccd05; }
-  #services-call-to-action h2 {
-    color: #313E59; }
-
 .header-background-image {
   background-image: url("../images/header2.jpg"); }
 
-.testimonial-background-image {
-  background-image: url("../images/header4.jpg");
-  background-color: #313E59;
-  background-blend-mode: luminosity; }
+.uk-button-danger {
+  background-color: #fccd05;
+  color: #313E59 !important; }
+  .uk-button-danger:hover, .uk-button-danger:focus {
+    background-color: #e5ba03; }
 
 .bottom-curve {
   background-image: url("../images/curve.png");
@@ -55,11 +48,11 @@ textarea {
   color: #fff;
   border: 1px solid white; }
   .uk-button-text:hover {
-    background-color: #ba4108;
+    background-color: #e5ba03;
     color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08);
     border: none;
-    line-height: 54px;
+    line-height: 56px;
     padding: 0px 72px 0px 55px; }
   .uk-button-text::before {
     right: 25px; }
@@ -75,17 +68,35 @@ textarea {
 
 .totop {
   position: fixed;
-  right: 60px;
-  bottom: 90px;
-  width: 80px;
+  right: 40px;
+  bottom: 50px;
+  width: 70px;
   visibility: hidden;
-  opacity: 0;
   transition: all .2s linear; }
+
+#totop-link {
+  opacity: 0.9; }
 
 .totop-visible {
   visibility: visible;
   opacity: 1; }
 
-.side-image {
+#summary .side-image {
   padding-left: 50px;
   border-radius: 0 0 30px 0; }
+
+#services {
+  padding: 80px 0; }
+  #services .uk-text-large {
+    font-size: 1.3em; }
+
+#services-call-to-action {
+  background-color: #fccd05; }
+  #services-call-to-action h2 {
+    color: #313E59; }
+
+#testimonials blockquote h2 {
+  font-size: 1.5em; }
+
+#testimonials q {
+  font-size: .9em; }
