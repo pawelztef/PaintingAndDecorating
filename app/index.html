@@ -147,7 +147,7 @@
           </div>
           <div id="services-call-to-action" class="uk-box-shadow-medium uk-section-secondary uk-section uk-section-small" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-slide-bottom-medium&quot;,&quot;delay&quot;:200}>
             <div class="uk-container uk-padding-small">
-              <h2 class="uk-text-center"><span uk-icon="icon: receiver; ratio: 2"></span>&nbsp;Call 0876248777 to make an appointment</h2>
+              <h2 class="uk-text-center"><span uk-icon="icon: receiver; ratio: 2"></span>&nbsp;Call 0894227776 to make an appointment</h2>
             </div>
           </div>
         </div>
@@ -276,13 +276,14 @@
         </div>
         <!-- End of gallery section -->
         <!-- Contact section -->
-        <div id="contact" class="uk-section-default uk-section uk-section-small" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-slide-bottom-medium&quot;,&quot;delay&quot;:200}>
-          <div class=uk-container>
-            <div class="uk-container uk-margin-xlarge">
+        <div id="contact" class="uk-section-default uk-section" uk-scrollspy={&quot;target&quot;:&quot;[uk-scrollspy-class]&quot;,&quot;cls&quot;:&quot;uk-animation-slide-bottom-medium&quot;,&quot;delay&quot;:200}>
+          <div class="uk-container">
+            <div class="uk-margin-small">
               <h2><p>Contact us</p></h2>
-              <div class=uk-grid-large uk-grid>
-                <div class="uk-width-expand@m uk-grid-item-match uk-flex-middle">
+              <div class="uk-grid-large" uk-grid>
+                <div class="uk-width-3-5@m uk-grid-item-match uk-flex-middle">
                   <div class=uk-panel>
+                    <p>Please contact us by filling out the form</p>
                     <form>
                       <fieldset class="uk-fieldset">
                         <div class="uk-margin">
@@ -295,21 +296,28 @@
                           <textarea class="uk-textarea" rows="9" placeholder="Your message"></textarea>
                         </div>
                         <div class="uk-margin uk-text-center" uk-scrollspy-class> 
-                          <a class="el-content uk-button uk-button-danger" href="#" >Send</a> 
+                          <a class="el-content uk-button uk-button-danger" href="#" >Send Message</a> 
                         </div>
                       </fieldset>
                     </form>
                   </div>
                 </div>
-                <div class="uk-width-xlarge@m uk-grid-item-match uk-flex-middle">
+                <div class="uk-width-expand@m uk-grid-item-match uk-flex-top">
                   <div class=uk-panel>
-                    <h2 class="uk-text-center@s uk-h1" uk-scrollspy-class> Piotr Trajdos </h2>
-                    <div class="uk-margin uk-text-center@s uk-text-lead" uk-scrollspy-class>
-                      <p>Ul. Brzozowa 21, 62-002 Jelonek.</p>
-                    </div>
-                    <div class="uk-margin uk-text-center@s uk-text-lead" uk-scrollspy-class>
-                      <p>+48 739 202 440</p>
-                    </div>
+                    <p><br /></p>
+                    <address>
+                      <h2 class="uk-h1 uk-text-center" uk-scrollspy-class>Dave Miguel</h2>
+                      <div class="uk-margin uk-text-center" uk-scrollspy-class>
+                        <p>Painting and Decorating<br />
+                        Mulhuddart,<br />
+                        co. Dublin<br />
+                        </p>
+                      </div>
+                      <div class="uk-margin uk-text-center" uk-scrollspy-class>
+                        <p><span uk-icon="icon: phone"></span>089 42 27 776</p>
+                        <p><span uk-icon="icon: mail"></span>info@pandd.ie</p>
+                      </div>
+                    </address>
                   </div>
                 </div>
               </div>
@@ -317,6 +325,11 @@
           </div>
         </div>
         <!-- End of the contact section -->
+        <!-- Map section -->
+        <div id="map" class="uk-section uk-section-default">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152515.69312067638!2d-6.251694999999953!3d53.324320099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin!5e0!3m2!1sen!2sie!4v1427905564349%20frameborder=0%20style=border:0" class="lazyloaded" data-was-processed="true"></iframe>
+        </div>
+        <!-- End of map section -->
         <!-- Footer -->
         <a href="body" id="totop-link" class="totop" uk-scroll>
           <img class="totop-img" src="/images/to-top.png" alt="">
@@ -335,7 +348,20 @@
                 </ul>
               </div>
               <div class="uk-text-left">
-                <a class="uk-logo" href=""> <img src="images/logo.png" alt="PAINTING AND DECORATING"> </a>
+                <a class="uk-logo" href=""> <img src="images/logo.png" alt="PAINTING AND DECORATING">
+                </a>
+                <address>
+                  <div class="uk-margin" uk-scrollspy-class>
+                    <p>Painting and Decorating<br />
+                    Mulhuddart,<br />
+                    co. Dublin<br />
+                    </p>
+                  </div>
+                  <div class="uk-margin" uk-scrollspy-class>
+                    <p><span uk-icon="icon: phone"></span>089 42 27 776</p>
+                    <p><span uk-icon="icon: mail"></span>info@pandd.ie</p>
+                  </div>
+                </address>
               </div>
               <div class="uk-text-left">
                 <p class="uk-text-lead">Wroking Hours</p>
@@ -350,33 +376,6 @@
                 </ul>
               </div>
             </div>
-            <!-- <div class=uk-grid-margin uk-grid> -->
-            <!--   <div class="uk-width-expand@m uk-grid-item-match uk-flex-middle"> -->
-            <!--     <div class=uk-panel> </div> -->
-            <!--   </div> -->
-            <!--   <div class="uk-width-expand@m uk-grid-item-match uk-flex-middle"> -->
-            <!--     <div class=uk-panel> -->
-            <!--       <div class=uk-text-center uk-scrollspy-class=uk-animation-slide-bottom-small> -->
-            <!--         <ul class="uk-subnav uk-margin-remove-bottom uk-flex-center" uk-margin> -->
-            <!--           <li class=el-item> <a class=el-link href=# uk-scroll>Polityka Prywatności</a> </li> -->
-            <!--           <li class=el-item> <a class=el-link href="">Oferta</a> </li> -->
-            <!--           <li class=el-item> <a class=el-link href="">Kontakt</a> </li> -->
-            <!--         </ul> -->
-            <!--       </div> -->
-            <!--     </div> -->
-            <!--   </div> -->
-            <!--   <div class="uk-width-expand@m uk-grid-item-match uk-flex-middle"> -->
-            <!--     <div class=uk-panel> -->
-            <!--       <div class="uk-margin uk-text-right@m uk-text-center" uk-scrollspy-class=uk-animation-slide-right-small> -->
-            <!--         <div class="uk-child-width-auto uk-grid-large uk-flex-right@m uk-flex-center" uk-grid> -->
-            <!--           <div> -->
-            <!--             <a uk-icon="icon: facebook;ratio: 2" href=https://www.facebook.com/apinvestpiotrtrajdos/ class="el-link uk-icon-link"></a> -->
-            <!--           </div> -->
-            <!--         </div> -->
-            <!--       </div> -->
-            <!--     </div> -->
-            <!--   </div> -->
-            <!-- </div> -->
           </div>
         </div>
         <!-- End of footer -->

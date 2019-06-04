@@ -101,6 +101,26 @@ textarea {
 #testimonials q {
   font-size: .9em; }
 
+#gallery .uk-section-large {
+  padding-bottom: 10px; }
+
+#map {
+  padding-top: 0; }
+  #map blockquote {
+    padding-bottom: 0px; }
+  #map iframe {
+    width: 100%;
+    height: 400px; }
+
+#contact {
+  padding-top: 0; }
+  #contact address p {
+    font-size: 1.5em; }
+  #contact address span {
+    padding-right: 8px;
+    position: relative;
+    bottom: 2px; }
+
 #footer .uk-text-lead {
   font-size: 1.3em; }
 
@@ -108,3 +128,8 @@ textarea {
   margin-top: 0;
   padding: 4px 0px;
   border-top: 1px solid rgba(255, 255, 255, 0.1); }
+
+#footer span {
+  padding-right: 8px;
+  position: relative;
+  bottom: 2px; }
