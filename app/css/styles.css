@@ -100,3 +100,11 @@ textarea {
 
 #testimonials q {
   font-size: .9em; }
+
+#footer .uk-text-lead {
+  font-size: 1.3em; }
+
+#footer .uk-list-divider > li:nth-child(n+2) {
+  margin-top: 0;
+  padding: 4px 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); }
