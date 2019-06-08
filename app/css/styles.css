@@ -104,6 +104,10 @@ textarea {
 #gallery .uk-section-large {
   padding-bottom: 10px; }
 
+#gallery h3.el-title {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1.2px; }
+
 #map {
   padding-top: 0; }
   #map blockquote {
