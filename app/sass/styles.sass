@@ -24,8 +24,18 @@
 textarea
   resize: none
 
-.header-button
-  border-radius: 60px 0 0 60px
+#tm-mobile
+  .uk-offcanvas-bar
+    background: $dark
+    padding-top: 80px
+#header
+  .header-button
+    border-radius: 60px 0 0 60px
+  h1
+    @media screen and (max-width: 959px)
+      font-size: 1.8em
+      margin-top: 0
+
 
 #contact
   margin-bottom: 40px
@@ -76,6 +86,10 @@ textarea
   width: 70px
   visibility: hidden 
   transition: all .2s linear
+  @media screen and (max-width: 959px)
+    right: 30px
+    bottom: 30px
+    width: 60px
 
 #totop-link
   opacity: 0.9
@@ -88,6 +102,10 @@ textarea
   .side-image
     padding-left: 50px
     border-radius: 0 0 30px 0
+  @media screen and (max-width: 659px)
+    .uk-panel.panel-about-me
+      text-align: center 
+      top: -40px
 
 #services
   padding: 80px 0
@@ -106,6 +124,10 @@ textarea
   q
     font-size: .9em
 #gallery
+  .gallery-main-container
+    @media screen and (max-width: 959px)
+      padding-bottom: 60px !important
+
   .uk-section-large
     padding-bottom: 10px
   h3.el-title
