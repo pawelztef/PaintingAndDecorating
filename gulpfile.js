@@ -3,16 +3,37 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
 var replace = require('gulp-replace');
+var paths = {
+  src: 'src/**/*',
+  srcHTML: 'src/**/*.html',
+  srcSASS: 'src/**/*.sass',
+  srcJS: 'src/**/*.js',
+  tmp: 'tmp',
+  tmpHTML: 'tmp/index.html',
+  tmpCSS: 'tmp/**/*.css',
+  tmpJS: 'tmp/**/*.js',
+  dist: 'dist',
+  distHTML: 'dist/index.html',
+  distCSS: 'dist/**/*.css',
+  distJS: 'dist/**/*.js'
+};
 
-
-function styles(){
-  return gulp.src('app/sass/**/*.sass')
-    // .pipe(replace('url("', 'url("./minified/images/'))
-    .pipe(sass())
-    .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.stream());
+function html(){
+  return gulp.src(paths.srcHTML).pipe(gulp.dest(paths.tmp));
 }
 
+function css() {
+  return gulp.src(paths.srcSASS)
+    .pipe(sass())
+    .pipe(gulp.dest(paths.tmp));
+    // .pipe(browserSync.stream());
+}
+
+function javaScripts() {
+  return gulp.src(paths.srcJS)
+    .pipe(gulp.dest(paths.tmp));
+    // .pipe(browserSync.stream());
+}
 function imgSquash() {
   return gulp.src("app/images/*")
     .pipe(imagemin())
@@ -32,8 +53,9 @@ function watch() {
   gulp.watch('app/js/**/*.js').on('change', browserSync.reload);
 }
 
-exports.styles = styles;
-exports.imgSquash = imgSquash;
-exports.watch = watch;
+// exports.styles = styles;
+// exports.imgSquash = imgSquash;
+// exports.watch = watch;
+exports.html = html;
 
 
