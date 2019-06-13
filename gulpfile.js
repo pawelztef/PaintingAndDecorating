@@ -3,7 +3,8 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
 var replace = require('gulp-replace');
-var inject = require('gulp-inject-string');
+var injectString = require('gulp-inject-string');
+var inject = require('gulp-inject');
 
 var paths = {
   src: 'src/**/*',
@@ -23,54 +24,52 @@ var paths = {
 };
 
 function html(){
-  return gulp.src(paths.srcHTML).pipe(gulp.dest(paths.tmp));
+  return gulp.src(paths.srcHTML)
+    .pipe(gulp.dest(paths.tmp))
+    .pipe(browserSync.stream());
 }
 
 function styles() {
   return gulp.src(paths.srcStyles)
     .pipe(sass())
-    .pipe(gulp.dest(paths.tmp));
-  // .pipe(browserSync.stream());
+    .pipe(gulp.dest(paths.tmp))
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
   return gulp.src(paths.srcScripts)
-    .pipe(gulp.dest(paths.tmp));
-  // .pipe(browserSync.stream());
+    .pipe(gulp.dest(paths.tmp))
+    .pipe(browserSync.stream());
 }
 
-function inject() {
-  return gulp.src(paths.srcStyles)
-    .pipe(sass())
-    .pipe(gulp.dest(paths.tmp));
-  // .pipe(browserSync.stream());
-}
-  // var targetTagJs = "<!-- inject:js -->";
-  // var targetTagCss = "<!-- inject:css -->";
-
-  // return gulp.src(paths.tmpHtml)
-  // .pipe(inject.after(targetTagCss, "hello"))
-  // .pipe(gulp.dest(paths.tmpCSS));
+function injectLinks () {
+  var css = gulp.src(paths.tmpCSS);
+  var js = gulp.src(paths.tmpScripts);
+  return gulp.src(paths.tmpHTML)
+    .pipe(inject( css, { relative:true } ))
+    .pipe(inject( js, { relative:true } ))
+    .pipe(gulp.dest(paths.tmp))
+    .pipe(browserSync.stream());
+};
 
 function watch() {
   browserSync.init({
     server: {
-      baseDir: 'app'
+      baseDir: 'tmp',
     },
   });
-  gulp.watch('app/images/*', imgSquash);
-  gulp.watch('app/sass/**/*.sass', styles);
-  gulp.watch('app/*.html').on('change', browserSync.reload);
-  gulp.watch('app/js/**/*.js').on('change', browserSync.reload);
+  // gulp.watch('app/images/*', imgSquash);
+  gulp.watch(paths.srcStyles, styles);
+  gulp.watch(paths.srcHTML, html); 
+  gulp.watch(paths.srcScripts, scripts);
 }
 
-
-// const staging = gulp.series(gulp.parallel(html, styles, scripts), inject);
-// exports.watch = watch;
-// exports.staging = staging;
+const copy = gulp.parallel(html, styles, scripts);
+const staging = gulp.series(copy, injectLinks, watch);
+exports.watch = watch;
+exports.staging = staging;
+exports.copy = copy;
+exports.injectLinks = injectLinks;
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
-exports.inject = inject;
-
-
