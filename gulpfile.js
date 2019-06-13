@@ -5,17 +5,20 @@ var imagemin = require('gulp-imagemin');
 var replace = require('gulp-replace');
 var injectString = require('gulp-inject-string');
 var inject = require('gulp-inject');
+var urlAdjuster = require('gulp-css-replace-url');
 
 var paths = {
   src: 'src/**/*',
   srcHTML: 'src/**/*.html',
   srcStyles: 'src/**/*.sass',
   srcScripts: 'src/**/*.js',
+  srcImages: 'src/images/*',
 
   tmp: 'tmp',
   tmpHTML: 'tmp/index.html',
   tmpCSS: 'tmp/**/*.css',
   tmpScripts: 'tmp/**/*.js',
+  tmpImages: 'tmp/images/',
 
   dist: 'dist',
   distHTML: 'dist/index.html',
@@ -42,6 +45,21 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
+function images() {
+  return gulp.src(paths.srcImages)
+  .pipe(imagemin())
+  .pipe(gulp.dest(paths.tmpImages));
+}
+
+function injectStringLinks() {
+  var targetTagJs = "<!-- injectString:js -->";
+  var targetTagCss = "<!-- injectString:css -->";
+  var linkString = '\n<link rel="stylesheet" href="css/styles.css">';
+  return gulp.src(paths.tmpHTML)
+    .pipe(injectString.after(targetTagCss, linkString)) 
+    .pipe(gulp.dest(paths.tmp));
+}
+
 function injectLinks () {
   var css = gulp.src(paths.tmpCSS);
   var js = gulp.src(paths.tmpScripts);
@@ -58,13 +76,13 @@ function watch() {
       baseDir: 'tmp',
     },
   });
-  // gulp.watch('app/images/*', imgSquash);
+  gulp.watch(paths.srcImages, images);
   gulp.watch(paths.srcStyles, styles);
   gulp.watch(paths.srcHTML, html); 
   gulp.watch(paths.srcScripts, scripts);
 }
 
-const copy = gulp.parallel(html, styles, scripts);
+const copy = gulp.parallel(html, styles, scripts, images);
 const staging = gulp.series(copy, injectLinks, watch);
 exports.watch = watch;
 exports.staging = staging;
@@ -73,3 +91,4 @@ exports.injectLinks = injectLinks;
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.images = images;
