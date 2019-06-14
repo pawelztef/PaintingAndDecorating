@@ -6,6 +6,7 @@ var replace = require('gulp-replace');
 var injectString = require('gulp-inject-string');
 var inject = require('gulp-inject');
 var urlAdjuster = require('gulp-css-replace-url');
+var cache = require('gulp-cache');
 
 var paths = {
   src: 'src/**/*',
@@ -23,7 +24,8 @@ var paths = {
   dist: 'dist',
   distHTML: 'dist/index.html',
   distCSS: 'dist/**/*.css',
-  distScripts: 'dist/**/*.js'
+  distScripts: 'dist/**/*.js',
+  distImages: 'dist/images/'
 };
 
 function html(){
@@ -47,7 +49,7 @@ function scripts() {
 
 function images() {
   return gulp.src(paths.srcImages)
-  .pipe(imagemin())
+  .pipe(cache(imagemin()))
   .pipe(gulp.dest(paths.tmpImages));
 }
 
